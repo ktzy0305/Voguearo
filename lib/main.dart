@@ -48,8 +48,16 @@ class _HomePageState extends State<HomePage>{
               currentAccountPicture: GestureDetector(
                 child: new CircleAvatar(
                   backgroundColor: Colors.grey,
+                  child: Icon(Icons.person, color: Colors.white, size: 40.0)
                 ),
               ),
+              decoration: new BoxDecoration(
+                color: Colors.red
+              ),
+            ),
+            // Body
+            ListTile(
+              title: Text("Home Page"),
             ),
           ],
         ),
