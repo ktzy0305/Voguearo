@@ -23,6 +23,27 @@ class _HomePageState extends State<HomePage>{
       appBar: new AppBar(
         backgroundColor: Colors.red,
         title: Text("Shop Here!"),
+        actions: <Widget>[
+          new IconButton(
+            icon: Icon(Icons.search, color: Colors.white),
+            onPressed: (){
+              print("Search Button is pressed!");
+            },
+          ),
+          new IconButton(
+            icon: Icon(Icons.shopping_cart, color: Colors.white),
+            onPressed: (){
+              print("Shopping Cart is pressed!");
+            },
+          )
+        ],
+      ),
+      drawer: new Drawer(
+        child: new ListView(
+          children: <Widget>[
+            
+          ],
+        ),
       ),
     );
   }
