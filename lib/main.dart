@@ -41,7 +41,16 @@ class _HomePageState extends State<HomePage>{
       drawer: new Drawer(
         child: new ListView(
           children: <Widget>[
-            
+            // Header
+            new UserAccountsDrawerHeader(
+              accountName: new Text("Kevin Toh"),
+              accountEmail: new Text("kevintoh0305@gmail.com"),
+              currentAccountPicture: GestureDetector(
+                child: new CircleAvatar(
+                  backgroundColor: Colors.grey,
+                ),
+              ),
+            ),
           ],
         ),
       ),
