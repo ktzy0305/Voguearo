@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_pro/carousel_pro.dart';
 
 void main() {
   runApp(
@@ -19,8 +20,14 @@ class HomePage extends StatefulWidget{
 class _HomePageState extends State<HomePage>{
   @override
   Widget build(BuildContext context) {
+    Widget image_carousel = new Container(
+      height: 300,
+      
+    );
+
     return new Scaffold(
       appBar: new AppBar(
+        // elevation: 0.0,
         backgroundColor: Colors.red,
         title: Text("Shop Here!"),
         actions: <Widget>[
@@ -56,8 +63,63 @@ class _HomePageState extends State<HomePage>{
               ),
             ),
             // Body
-            ListTile(
-              title: Text("Home Page"),
+            InkWell(
+              splashColor: Colors.redAccent,
+              child: ListTile(
+                title: Text("Home"),
+                leading: Icon(Icons.home),
+                // onTap: () => {},
+              ),
+              onTap: ()=>{}
+            ),
+            InkWell(
+              splashColor: Colors.redAccent,
+              child: ListTile(
+                title: Text("My Account"),
+                leading: Icon(Icons.person),
+              ),
+              onTap: ()=>{}
+            ),
+            InkWell(
+              splashColor: Colors.redAccent,
+              child: ListTile(
+                title: Text("My Orders"),
+                leading: Icon(Icons.shopping_basket),
+              ),
+              onTap: ()=>{}
+            ),
+            InkWell(
+              splashColor: Colors.redAccent,
+              child: ListTile(
+                title: Text("Categories"),
+                leading: Icon(Icons.dashboard),
+              ),
+              onTap: ()=>{}
+            ),
+            InkWell(
+              splashColor: Colors.redAccent,
+              child: ListTile(
+                title: Text("Favourites"),
+                leading: Icon(Icons.favorite, color: Colors.red),
+              ),
+              onTap: ()=>{}
+            ),
+            Divider(),
+            InkWell(
+              splashColor: Colors.redAccent,
+              child: ListTile(
+                title: Text("Settings"),
+                leading: Icon(Icons.settings),
+              ),
+              onTap: ()=>{}
+            ),
+            InkWell(
+              splashColor: Colors.redAccent,
+              child: ListTile(
+                title: Text("About"),
+                leading: Icon(Icons.help, color: Colors.blue),
+              ),
+              onTap: ()=>{}
             ),
           ],
         ),
