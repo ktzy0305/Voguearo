@@ -4,6 +4,7 @@ import 'package:carousel_pro/carousel_pro.dart';
 
 // Import Local Components
 import 'package:shop_here/components/horizontal_listview.dart';
+import 'package:shop_here/components/product.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -135,13 +136,28 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           // Image Carousel
           image_carousel,         
+          
           // Padding with 'Categories' text
           new Padding(
             padding: const EdgeInsets.all(8.0),
-            child: new Text("Categories"),
+            child: new Text("Categories", style: TextStyle(fontSize: 20.0),),
           ),
+          
           // Horizontal List View for Categories
           HorizontalList(),
+
+          // Padding with '' text
+          new Padding(
+            padding: const EdgeInsets.only(left: 8.0, top: 10.0, bottom: 8.0),
+            child: new Text("Recent Products", style: TextStyle(fontSize: 20.0),),
+          ),
+
+          // Grid View
+          Container(
+            child: Product(), 
+            height: 320.0,
+          )
+        
         ],
       ),
     );

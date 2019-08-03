@@ -31,18 +31,21 @@ class Category extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(2.0),
       child: Container(
-          width: 100.0,
-          height: 80.0,
-          child: InkWell(
-            child: ListTile(
-              title: Image.asset(image_location),
-              subtitle: new Container(
-                alignment: Alignment.topCenter,
-                child: Text(image_caption),
+        width: 100.0,
+        height: 80.0,
+        child: InkWell(
+          child: ListTile(
+            title: Image.asset(image_location),
+            subtitle: new Container(
+              alignment: Alignment.topCenter,
+              child: Text(image_caption, 
+                style: TextStyle(fontSize: 16.0)
               ),
             ),
-            onTap: () {},
-          )),
+          ),
+          onTap: () {},
+        )
+      ),
     );
   }
 }
