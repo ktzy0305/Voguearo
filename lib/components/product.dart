@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_here/pages/product_details.dart';
 
 class Product extends StatefulWidget {
   @override
@@ -71,7 +72,8 @@ class Single_Product extends StatelessWidget {
                 ),
               ),
             ),
-            onTap: (){},
+            // Pass values of product properties to product details page 
+            onTap: ()=>Navigator.of(context).push(new MaterialPageRoute(builder: (context) => new ProductDetails(product_name, product_price, product_old_price, product_picture))),
           )
         ) 
       ),
