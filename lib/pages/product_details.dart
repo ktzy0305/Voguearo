@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shop_here/main.dart';
+import 'package:shop_here/components/product.dart';
 
 class ProductDetails extends StatefulWidget {
   final product_details_name;
@@ -20,7 +22,12 @@ class _ProductDetailsState extends State<ProductDetails> {
       appBar: new AppBar(
         // elevation: 0.0,
         backgroundColor: Colors.red,
-        title: Text("Shop Here!"),
+        title: InkWell(
+          child: Text("Shop Here!"),
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> new HomePage()));
+          },
+        ), 
         actions: <Widget>[
           new IconButton(
             icon: Icon(Icons.search, color: Colors.white),
@@ -123,8 +130,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                         context: context,
                         builder: (context) {
                           return new AlertDialog(
-                            title: new Text("Colour"),
-                            content: new Text("Select a colour"),
+                            title: new Text("Color"),
+                            content: new Text("Select a color"),
                             actions: <Widget>[
                               MaterialButton(
                                 child: Text("Close"),
@@ -220,6 +227,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."),
           ),
           Divider(),
+          // Product Condition
           new Row(
             children: <Widget>[
               Padding(
@@ -259,8 +267,73 @@ class _ProductDetailsState extends State<ProductDetails> {
               )
             ],
           ),
+          Divider(),
+          // Similar Products
+          Padding(
+            child: new Text(
+              "Similar Products",
+              style: TextStyle(fontSize: 16.0),
+            ),
+            padding: const EdgeInsets.all(12.0),
+          ),
+          Container(
+            child: SimilarProducts(),
+            height: 360.0,
+          )
         ],
       ),
+    );
+  }
+}
+
+class SimilarProducts extends StatefulWidget {
+  @override
+  _SimilarProductsState createState() => _SimilarProductsState();
+}
+
+class _SimilarProductsState extends State<SimilarProducts> {
+  var product_list = [
+    {
+      "name": "Blazer",
+      "picture": "images/products/blazer1.jpeg",
+      "old_price": 120,
+      "price": 85,
+    },
+    {
+      "name": "Red Dress",
+      "picture": "images/products/dress1.jpeg",
+      "old_price": 100,
+      "price": 50,
+    },
+    {
+      "name": "High Heels",
+      "picture": "images/products/hills1.jpeg",
+      "old_price": 100,
+      "price": 50,
+    },
+    {
+      "name": "Floral Skirt",
+      "picture": "images/products/skt1.jpeg",
+      "old_price": 49,
+      "price": 19,
+    },
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView.builder(
+      itemCount: product_list.length,
+      gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2
+      ),
+      itemBuilder: (BuildContext context, int index){
+        return Single_Product(
+          product_list[index]['name'],
+          product_list[index]['picture'],
+          product_list[index]['old_price'],
+          product_list[index]['price']
+        );
+      },
     );
   }
 }

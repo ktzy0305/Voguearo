@@ -6,6 +6,9 @@ import 'package:carousel_pro/carousel_pro.dart';
 import 'package:shop_here/components/horizontal_listview.dart';
 import 'package:shop_here/components/product.dart';
 
+// Pages
+import 'package:shop_here/pages/shopping_cart.dart';
+
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
@@ -24,7 +27,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     Widget image_carousel = new Container(
-        height: 200.0,
+        height: 180.0,
         child: new Carousel(
           boxFit: BoxFit.cover,
           images: [
@@ -39,6 +42,7 @@ class _HomePageState extends State<HomePage> {
           animationCurve: Curves.fastOutSlowIn,
           animationDuration: Duration(milliseconds: 1000),
           dotSize: 4.0,
+          dotBgColor: Colors.transparent,
           indicatorBgPadding: 6.0,
         )
       );
@@ -58,7 +62,7 @@ class _HomePageState extends State<HomePage> {
           new IconButton(
             icon: Icon(Icons.shopping_cart, color: Colors.white),
             onPressed: () {
-              print("Shopping Cart is pressed!");
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> new ShoppingCart()));
             },
           )
         ],
@@ -82,7 +86,10 @@ class _HomePageState extends State<HomePage> {
                 splashColor: Colors.redAccent,
                 child: ListTile(
                   title: Text("Home"),
-                  leading: Icon(Icons.home),
+                  leading: Icon(
+                    Icons.home, 
+                    color: Colors.red,
+                  ),
                   // onTap: () => {},
                 ),
                 onTap: () => {}),
@@ -90,28 +97,43 @@ class _HomePageState extends State<HomePage> {
                 splashColor: Colors.redAccent,
                 child: ListTile(
                   title: Text("My Account"),
-                  leading: Icon(Icons.person),
+                  leading: Icon(
+                    Icons.person,
+                    color: Colors.red,
+                  ),
                 ),
                 onTap: () => {}),
             InkWell(
                 splashColor: Colors.redAccent,
                 child: ListTile(
                   title: Text("My Orders"),
-                  leading: Icon(Icons.shopping_basket),
+                  leading: Icon(
+                    Icons.shopping_basket,
+                    color: Colors.red,
+                  ),
                 ),
                 onTap: () => {}),
             InkWell(
-                splashColor: Colors.redAccent,
-                child: ListTile(
-                  title: Text("Categories"),
-                  leading: Icon(Icons.dashboard),
+              splashColor: Colors.redAccent,
+              child: ListTile(
+                title: Text("Shopping Cart"),
+                leading: Icon(
+                  Icons.shopping_cart, 
+                  color: Colors.red,
                 ),
-                onTap: () => {}),
+              ),
+              onTap: () => {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> new ShoppingCart()))
+              }
+            ),
             InkWell(
                 splashColor: Colors.redAccent,
                 child: ListTile(
                   title: Text("Favourites"),
-                  leading: Icon(Icons.favorite, color: Colors.red),
+                  leading: Icon(
+                    Icons.favorite, 
+                    color: Colors.red
+                  ),
                 ),
                 onTap: () => {}),
             Divider(),
@@ -126,7 +148,7 @@ class _HomePageState extends State<HomePage> {
                 splashColor: Colors.redAccent,
                 child: ListTile(
                   title: Text("About"),
-                  leading: Icon(Icons.help, color: Colors.blue),
+                  leading: Icon(Icons.help),
                 ),
                 onTap: () => {}),
           ],
