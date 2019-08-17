@@ -1,16 +1,18 @@
 # shop_here
 
-A new Flutter project.
+A simple ecommerce application for fashionistas to buy different kinds of apparel. This project follows the **flutter_ecommerce_app** repository by **@Santos-Enoque**.
 
-## Getting Started
+## Features (Work In Progress)
+1. Product Overview
+2. Product Details
+3. Shopping Cart
 
-This project is a starting point for a Flutter application.
+## Screenshots
+> *Note: The application is currently mostly static pages with some component overflow issues in the user interface. I'll be fixing these issues along with linking the application to FireBase in the following weeks.*
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Product Overview
+![](https://github.com/ktzy0305/shop_here/app_screenshots/main_page.png)
+### Product details
+![](https://github.com/ktzy0305/shop_here/app_screenshots/product_details.png)
+### Shopping Cart
+![](https://github.com/ktzy0305/shop_here/app_screenshots/shopping_cart.png)
