@@ -8,11 +8,10 @@ A simple ecommerce application for fashionistas to buy different kinds of appare
 3. Shopping Cart
 
 ## Screenshots
-> *Note: The application is currently mostly static pages with some component overflow issues in the user interface. I'll be fixing these issues along with linking the application to FireBase in the following weeks.*
-
 ### Product Overview
-![](https://github.com/ktzy0305/shop_here/app_screenshots/main_page.png)
+![](https://github.com/ktzy0305/shop_here/blob/master/app_screenshots/main_page.png#thumbnail)
 ### Product details
-![](https://github.com/ktzy0305/shop_here/app_screenshots/product_details.png)
+![](https://github.com/ktzy0305/shop_here/blob/master/app_screenshots/product_details.png)
 ### Shopping Cart
-![](https://github.com/ktzy0305/shop_here/app_screenshots/shopping_cart.png)
+![](https://github.com/ktzy0305/shop_here/blob/master/app_screenshots/shopping_cart.png)
+> *Note: The application is currently mostly static pages with some component overflow issues in the user interface. I'll be fixing these issues along with linking the application to FireBase in the following weeks.*
