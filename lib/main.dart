@@ -162,7 +162,10 @@ class _HomePageState extends State<HomePage> {
           // Padding with 'Categories' text
           new Padding(
             padding: const EdgeInsets.all(8.0),
-            child: new Text("Categories", style: TextStyle(fontSize: 20.0),),
+            child: new Text(
+              "Categories", 
+              style: TextStyle(fontSize: 20.0),
+            ),
           ),
           
           // Horizontal List View for Categories
@@ -171,13 +174,16 @@ class _HomePageState extends State<HomePage> {
           // Padding with '' text
           new Padding(
             padding: const EdgeInsets.only(left: 8.0, top: 10.0, bottom: 8.0),
-            child: new Text("Recent Products", style: TextStyle(fontSize: 20.0),),
+            child: new Text(
+              "Recent Products", 
+              style: TextStyle(fontSize: 20.0),
+            ),
           ),
 
           // Grid View
           Container(
             child: Product(), 
-            height: 320.0,
+            height: 460.0,
           )
         
         ],

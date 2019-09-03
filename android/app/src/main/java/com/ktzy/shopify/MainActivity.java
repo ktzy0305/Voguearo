@@ -1,4 +1,4 @@
-package com.example.shop_here;
+package com.ktzy.shopify;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
