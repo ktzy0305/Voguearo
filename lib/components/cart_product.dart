@@ -74,7 +74,10 @@ class CartProductViewHolder extends StatelessWidget {
           ),
         ),
         title: new Container(
-          child: new Text(product_name),
+          child: new Text(
+            product_name, 
+            style: TextStyle(fontSize: 18.0),
+          ),
           padding: const EdgeInsets.only(top: 5.0),
         ), 
         subtitle: new Column(
@@ -83,27 +86,33 @@ class CartProductViewHolder extends StatelessWidget {
               children: <Widget>[
                 // Size
                 new Padding(
-                  child: Text("Size : "),
-                  padding: const EdgeInsets.all(0.0)
+                  child: Text(
+                    "Size : ", 
+                    style: TextStyle(fontSize: 16.0),
+                  ),
+                  padding: const EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 0.0),
                 ),
                 new Padding(
                   child: Text(
                     product_size, 
-                    style: TextStyle(color: Colors.red),
+                    style: TextStyle(color: Colors.red, fontSize: 16.0),
                   ),
-                  padding: const EdgeInsets.all(4.0,)
+                  padding: const EdgeInsets.fromLTRB(4.0, 5.0, 4.0, 0.0),
                 ),
                 // Color
                 new Padding(
-                  child: new Text("Color : "),
-                  padding: const EdgeInsets.fromLTRB(20.0, 8.0, 8.0, 8.0),
+                  child: new Text(
+                    "Color : ",
+                    style: TextStyle(fontSize: 16.0),
+                  ),
+                  padding: const EdgeInsets.fromLTRB(20.0, 13.0, 8.0, 8.0),
                 ),
                 new Padding(
                   child: Text(
                     product_color, 
-                    style: TextStyle(color: Colors.red),
+                    style: TextStyle(color: Colors.red, fontSize: 16.0),
                   ),
-                  padding: const EdgeInsets.all(4.0)
+                  padding: const EdgeInsets.fromLTRB(4.0, 13.0, 4.0, 8.0)
                 ),
               ],
             ),
@@ -114,23 +123,33 @@ class CartProductViewHolder extends StatelessWidget {
                 "\$${product_price}",
                 style: TextStyle(
                   color: Colors.red,
-                  fontSize: 16.0,
+                  fontSize: 18.0,
                   fontWeight: FontWeight.bold),
               ),
-              padding: const EdgeInsets.only(bottom: 5.0),
+              padding: const EdgeInsets.only(top: 5.0),
             ),
           ],
         ),
         trailing: new Column(
           children: <Widget>[
-            new IconButton(
-              icon: Icon(Icons.arrow_drop_up),
-              onPressed: () => increaseQuantity(),
+            new Expanded(
+              child: new IconButton(
+                icon: Icon(Icons.arrow_drop_up),
+                onPressed: () => increaseQuantity(),
+                padding: EdgeInsets.only(bottom: 20.0),
+              ),
             ),
-            new Text(product_qty.toString()),
-            new IconButton(
-              icon: Icon(Icons.arrow_drop_down),
-              onPressed: () => reduceQuantity(),
+            new Expanded(
+              child: new Text(
+                product_qty.toString(),
+                style: TextStyle(fontSize: 16.0),
+              ),
+            ),
+            new Expanded(
+              child: new IconButton(
+                icon: Icon(Icons.arrow_drop_down),
+                onPressed: () => reduceQuantity(),
+              ),
             ),
           ],
         ),
@@ -147,5 +166,4 @@ class CartProductViewHolder extends StatelessWidget {
       product_qty = product_qty - 1;
     }
   }
-
 }
