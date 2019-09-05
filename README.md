@@ -1,8 +1,8 @@
-# shop_here
+# shopify
 
 A simple ecommerce application for fashionistas to buy different kinds of apparel. This project follows the **flutter_ecommerce_app** repository by **@Santos-Enoque**.
 
-## Features (Work In Progress)
+## Features
 1. Product Overview
 2. Product Details
 3. Shopping Cart
@@ -14,4 +14,4 @@ A simple ecommerce application for fashionistas to buy different kinds of appare
 ![](https://github.com/ktzy0305/shop_here/blob/master/app_screenshots/product_details.png)
 ### Shopping Cart
 ![](https://github.com/ktzy0305/shop_here/blob/master/app_screenshots/shopping_cart.png)
-> *Note: The application is currently mostly static pages with some component overflow issues in the user interface. I'll be fixing these issues along with linking the application to FireBase in the following weeks.*
+> *Note: Currently working on the backend
