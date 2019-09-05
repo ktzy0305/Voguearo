@@ -50,8 +50,8 @@ class _HomePageState extends State<HomePage> {
     return new Scaffold(
       appBar: new AppBar(
         // elevation: 0.0,
-        backgroundColor: Colors.red,
-        title: Text("Shop Here!"),
+        backgroundColor: Color(0xffff5f5f),
+        title: Text("Shopify"),
         actions: <Widget>[
           new IconButton(
             icon: Icon(Icons.search, color: Colors.white),
@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage> {
                     backgroundColor: Colors.grey,
                     child: Icon(Icons.person, color: Colors.white, size: 40.0)),
               ),
-              decoration: new BoxDecoration(color: Colors.red),
+              decoration: new BoxDecoration(color: Color(0xffff5f5f)),
             ),
             // Body
             InkWell(
@@ -88,7 +88,7 @@ class _HomePageState extends State<HomePage> {
                   title: Text("Home"),
                   leading: Icon(
                     Icons.home, 
-                    color: Colors.red,
+                    color: Color(0xffff5f5f),
                   ),
                   // onTap: () => {},
                 ),
@@ -99,7 +99,7 @@ class _HomePageState extends State<HomePage> {
                   title: Text("My Account"),
                   leading: Icon(
                     Icons.person,
-                    color: Colors.red,
+                    color: Color(0xffff5f5f),
                   ),
                 ),
                 onTap: () => {}),
@@ -109,7 +109,7 @@ class _HomePageState extends State<HomePage> {
                   title: Text("My Orders"),
                   leading: Icon(
                     Icons.shopping_basket,
-                    color: Colors.red,
+                    color: Color(0xffff5f5f),
                   ),
                 ),
                 onTap: () => {}),
@@ -119,7 +119,7 @@ class _HomePageState extends State<HomePage> {
                 title: Text("Shopping Cart"),
                 leading: Icon(
                   Icons.shopping_cart, 
-                  color: Colors.red,
+                  color: Color(0xffff5f5f),
                 ),
               ),
               onTap: () => {
@@ -132,7 +132,7 @@ class _HomePageState extends State<HomePage> {
                   title: Text("Favourites"),
                   leading: Icon(
                     Icons.favorite, 
-                    color: Colors.red
+                    color: Color(0xffff5f5f)
                   ),
                 ),
                 onTap: () => {}),
