@@ -7,6 +7,13 @@ A simple ecommerce application for fashionistas to buy different kinds of appare
 2. Product Details
 3. Shopping Cart
 
+## Planned Updates
+1. Google Sign In (In Progress)
+2. Cloud Firestore Backend DB (In Progress)
+3. Product Search
+4. Sort Product By Category
+5. UI Redesign
+
 <!---
 ## Screenshots
 ### Product Overview
