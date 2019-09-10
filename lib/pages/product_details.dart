@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shop_here/main.dart';
-import 'package:shop_here/components/product.dart';
+import 'package:shopify/pages/home_page.dart';
+import 'package:shopify/components/product.dart';
 
 class ProductDetails extends StatefulWidget {
   final product_details_name;
