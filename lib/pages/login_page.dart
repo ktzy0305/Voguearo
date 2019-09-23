@@ -55,7 +55,6 @@ class _LoginPageState extends State<LoginPage> {
     });
 
     GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
-    
     GoogleSignInAuthentication googleSignInAuthentication = await googleSignInAccount.authentication;
     
     AuthCredential authCredential = GoogleAuthProvider.getCredential(
@@ -104,6 +103,63 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-	return Container();
+    return new Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        title: new Text(
+          "Login", 
+          style: TextStyle(
+            color: Colors.red.shade900
+          ),
+        ),
+        elevation: 0.5,
+      ),
+      body: Stack(
+        children: <Widget>[
+          Center(
+            child: FlatButton(
+              onPressed: (){
+                handleSignIn();
+              },
+              child: Text(
+                "Sign in / Sign up with Google",
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              color: Colors.red.shade900,
+            ),
+          ),
+          Visibility(
+            visible: isLoading ?? true,
+            child: Center(
+              child: Container(
+                alignment: Alignment.center,
+                color: Colors.white.withOpacity(0.9),
+                child: CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.red),
+                ),
+              ), 
+            ), 
+          ),
+        ],
+      ),
+    );
+
+
+
+	// return Container(
+  //   color: Colors.white,
+  //   child: Stack(
+  //     children: <Widget>[
+  //       new MaterialButton(
+  //         color: Colors.red,
+  //         child: new Text("Sign In"),
+  //         onPressed: () => handleSignIn(),
+  //       )
+  //     ],
+  //   ),
+  // );
   }
 }
