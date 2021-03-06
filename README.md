@@ -1,4 +1,4 @@
-# shopify
+# Voguearo
 
 A simple ecommerce application for fashionistas to buy different kinds of apparel. This project follows the **flutter_ecommerce_app** repository by **@Santos-Enoque**.
 
